@@ -1,0 +1,240 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+*
+* Used to generate responsive styles according to the breakpoint we set into the variables file
+*
+*/
+/* ==========================================================================
+Helper classes
+========================================================================== */
+/*
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+* `contenteditable` attribute is included anywhere else in the document.
+* Otherwise it causes space to appear at the top and bottom of elements
+* that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+* `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+html,
+body {
+  font-family: "Questrial", sans-serif;
+  display: table;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  line-height: 2.5em;
+  font-size: 1.2em;
+  color: #fff;
+  background: #00acdd;
+  overflow: hidden;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjAlIiBjeT0iMCUiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMGFjZGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDM1NDQiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-radial-gradient(top left, #00acdd 0%, #003544 100%);
+  background: -webkit-radial-gradient(top left, #00acdd 0%, #003544 100%);
+  background: radial-gradient(top left, #00acdd 0%, #003544 100%);
+}
+@media only screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 0.96em;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color: #ed1c24;
+}
+
+.main {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+}
+.main .inner-content {
+  width: 30%;
+  max-width: 500px;
+  padding: 1% 1%;
+  text-align: center;
+  margin: 0 auto;
+}
+.main .inner-content .decide {
+  width: auto;
+  height: 0%;
+  padding: 0px;
+  padding-bottom: 1px;
+  margin: auto;
+}
+.main .inner-content h1 {
+  font-size: 200%;
+}
+.main .inner-content h2 {
+  font-size: 120%;
+  padding-bottom: 0px;
+}
+.main .inner-content img {
+  width: 100%;
+  max-height: 100px;
+}
+.main .inner-content ul {
+  margin: 3.5em 0 0;
+}
+.main .inner-content ul li {
+  margin: 1em 1em 0;
+  font-size: 3.5em;
+  display: inline-block;
+}
+
+/* #app {
+  background-color: #404040;
+  border: 1px solid white;
+  border-radius: 7px;
+} */
+
+#info {
+  font-size: 20px;
+}
+
+#c {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#fileName {
+  font-family: "Questrial", sans-serif;
+}
+
+input[type="file"] {
+  font-family: "Questrial", sans-serif;
+  top: 10px;
+  left: 8px;
+  margin-left: 22%;
+  font-size: 17px;
+  color: #b8b8b8;
+}
+
+button {
+  font-family: "Questrial", sans-serif;
+  display: inline-block;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}

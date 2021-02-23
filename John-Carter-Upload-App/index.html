@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JC-Upload-App</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <!-- partial:index.partial.html -->
+  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+
+  <canvas id="c"></canvas>
+  <section class="main">
+    <div class="inner-content">
+
+      <head>
+        <title>JC-Upload-App</title>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios@0.2.1/dist/axios.min.js"></script>
+      </head>
+
+      <body>
+
+        <header>
+          <h1>
+            <img src="./img/John_Carter.png"> 
+          </h1>
+        </header>
+
+        <div class="decide">
+          <h1>Cloud Upload</h1>
+        </div>
+        <h3 id="info">a lorem ipsum Platform Product</h3> <br><br>
+
+        <div id="app">
+
+          <!-- <h2></h2> -->
+          <br />
+          <div v-if="!file">
+           <!-- <h3></h3> -->
+            <!--<form onsubmit="return Validate(this);"> -->
+            <input type="file" id="fileName" @change="onFileChange" onChange="printFileName()">
+             <p hidden id="result"></p>
+            <!--   </form>  -->
+          </div>
+          <div v-else>
+            <p id="result"></p>
+            <button v-if="!uploadURL" @click="removeFile">Remove file</button>
+            <button v-if="!uploadURL" @click="uploadFile">Upload file</button>
+          </div>
+          <div v-if="uploadURL"> <h2 >File successfully uploaded</br></h2>
+          <button onClick="window.location.href=window.location.href">Upload another file</button>
+          </div>
+          
+        </div>
+
+    </div>
+</body>
+</section>
+<!-- partial -->
+<script src="./script.js"></script>
+
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
