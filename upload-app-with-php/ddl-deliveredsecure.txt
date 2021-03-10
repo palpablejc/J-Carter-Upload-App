@@ -1,0 +1,17 @@
+create database deliveredsecure;
+
+use deliveredsecure;
+create table users (id int primary key auto_increment, username varchar(100)
+NOT NULL,
+password varchar(255) NOT NULL, UNIQUE KEY (id), UNIQUE KEY (username) );
+insert into users (username, password) values ("john", "test");
+
+create table items (id int primary key auto_increment, name varchar(100), price decimal(5, 2) );
+
+
+insert into items (name, price) values ("ASUS Transformer Book Flip, Core i7,
+8GB DDR3L", 679.99);
+insert into items (name, price) values ("Acer Aspire A6 Quad-Core, DDR3L, 1TB
+HDD", 329.99);
+insert into items (name, price) values ("HP Core i7, 8GB DDR3, 1TB HDD", 699.99);
+insert into items (name, price) values ("Seagate 1TB USB Hard Drive", 49.99);
